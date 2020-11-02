@@ -8,7 +8,7 @@ def pytest_addoption(parser):
                      action='store', default="en",
                      help="Choose you language:ru,en, etc.")
 
-#По заданию нам нужен только Хром
+#По заданию нам нужен только Хром, но при желании тут можно добавить и другие
 @pytest.fixture(scope="function")
 def browser(request):
     language_name = request.config.getoption("language")
